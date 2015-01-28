@@ -8,38 +8,25 @@ namespace Notes_Xamarin
     {
         Note _note = null;
 
+        Entry entry;
+        MyEditor editor;
+
         public NoteEditPage(Note note)
         {
             _note = note;
-            Title = "Note";
+            Title = "Note";           
 
-            var entry = new Entry()
+            entry = new Entry()
             {
                 Placeholder = "Title",
             };
             entry.Text = _note.Title;
-            entry.TextChanged += (object sender, TextChangedEventArgs e) => 
-            {
-                if (!(sender as Entry).IsFocused)
-                {
-                    _note.Title = e.NewTextValue;
-                    NoteAccessor.Save(_note);
-                }
-            };                   
 
-            var editor = new MyEditor()
+            editor = new MyEditor()
             {
                 Keyboard = Keyboard.Create(KeyboardFlags.All),
                 VerticalOptions = LayoutOptions.FillAndExpand,                     
             };                   
-            editor.TextChanged += (object sender, TextChangedEventArgs e) => 
-            {
-                if (!(sender as Editor).IsFocused)
-                {
-                    _note.Body = e.NewTextValue;
-                    NoteAccessor.Save(_note);
-                }
-            };
                     
             Content = new StackLayout()
             {
@@ -52,6 +39,19 @@ namespace Notes_Xamarin
                 },
                 Padding = new Thickness(5, 5, 5, 5)
             };
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();           
+
+            _note.Title = entry.Text;
+            _note.Body = editor.Text;
+
+            if (!string.IsNullOrWhiteSpace(_note.Title) || !string.IsNullOrWhiteSpace(_note.Body) || _note.Id > 0)
+            {
+                NoteAccessor.Save(_note);
+            }
         }
     }
 }

@@ -22,7 +22,7 @@ namespace ResourceAccess
 
         public bool IsDeleted { get; set; }
 
-        public string ToString()
+        public override string ToString()
         {
             return Title;
         }

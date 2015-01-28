@@ -7,6 +7,8 @@ namespace Notes_Xamarin
 {
     public class NoteList : BaseContentPage
     {
+        ListView listView;
+
         public NoteList()
         {
             ToolbarItems.Add(
@@ -17,15 +19,27 @@ namespace Notes_Xamarin
                         }
                     ), ToolbarItemOrder.Primary, 0));
                         
-            Title = "poop";
+            Title = "Notes";
+
+            listView = new ListView();
+            Content = listView;
+            listView.ItemSelected += (object sender, SelectedItemChangedEventArgs e) => 
+                {
+                    var note = e.SelectedItem as Note;
+                    if (note != null)
+                    {
+                        this.Navigation.PushAsync(new NoteEditPage(note), true);
+                    }
+                };
+
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
 
             var list = NoteAccessor.FindAll();
-
-            var listView = new ListView();
-            listView.ItemsSource = list;
-
-            Content = listView;
-
+            listView.ItemsSource = list;           
         }
     }
 }
