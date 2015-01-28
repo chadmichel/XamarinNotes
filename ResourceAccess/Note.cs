@@ -21,6 +21,11 @@ namespace ResourceAccess
         public DateTime UpdatedAt { get; set; }
 
         public bool IsDeleted { get; set; }
+
+        public string ToString()
+        {
+            return Title;
+        }
     }
 }
 

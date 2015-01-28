@@ -36,6 +36,7 @@
     <Compile Include="Pages\NoteList.cs" />
     <Compile Include="Pages\NoteEditPage.cs" />
     <Compile Include="CustomControls\MyEditor.cs" />
+    <Compile Include="Pages\BaseContentPage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.3.1.6296\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.1.6296\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -55,5 +56,11 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Pages\" />
     <Folder Include="CustomControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ResourceAccess\ResourceAccess.csproj">
+      <Project>{95024F14-3D85-4D0F-A4CC-B93406A0E220}</Project>
+      <Name>ResourceAccess</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

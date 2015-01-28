@@ -22,7 +22,7 @@ namespace ResourceAccess
                 throw new InvalidOperationException("You must call SetPath on AccessorBase before using any database calls.");
 
             // Create our connection
-            var db = new SQLiteConnection (System.IO.Path.Combine (basePathStatic, "questions.db"));
+            var db = new SQLiteConnection (System.IO.Path.Combine (basePathStatic, "notes.db"));
             return db;
         }
     }

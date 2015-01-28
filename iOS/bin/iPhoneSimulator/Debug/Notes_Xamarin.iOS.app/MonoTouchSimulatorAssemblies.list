@@ -24,4 +24,8 @@ System.Reflection.Extensions.dll
 System.Diagnostics.Debug.dll
 System.Net.Http.dll
 System.Runtime.Serialization.dll
+ResourceAccess.dll
+SQLite-net.dll
+SQLitePCL.raw.dll
+System.Resources.ResourceManager.dll
 Notes_Xamarin.dll

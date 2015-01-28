@@ -1,0 +1,2 @@
+ResourceAccessTests.Droid.MainActivity;resourceaccesstests.droid.MainActivity
+ResourceAccessTests.Droid.GLView1;resourceaccesstests.droid.GLView1

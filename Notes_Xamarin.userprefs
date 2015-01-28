@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="ResourceAccessTests/ResourceAccessTests_iOS.csproj">
+﻿<Properties StartupItem="iOS/Notes_Xamarin.iOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.1" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Notes_Xamarin/Pages/NoteList.cs">
     <Files>

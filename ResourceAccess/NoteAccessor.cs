@@ -25,7 +25,10 @@ namespace ResourceAccess
                 }
                 db.CreateTable<Note> ();
 
-                db.Execute("delete from Note");
+                if (dropTables)
+                {
+                    db.Execute("delete from Note");
+                }
             }
         }
 

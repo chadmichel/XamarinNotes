@@ -1,10 +1,11 @@
 ﻿using System;
 using Xamarin.Forms;
 using System.Collections.Generic;
+using ResourceAccess;
 
 namespace Notes_Xamarin
 {
-    public class NoteList : ContentPage
+    public class NoteList : BaseContentPage
     {
         public NoteList()
         {
@@ -12,15 +13,13 @@ namespace Notes_Xamarin
                 new ToolbarItem("Add", null, 
                     new Action(() => 
                         {
-                            this.Navigation.PushAsync(new NoteEditPage(), true);
+                            this.Navigation.PushAsync(new NoteEditPage(new Note()), true);
                         }
                     ), ToolbarItemOrder.Primary, 0));
                         
             Title = "poop";
 
-            var list = new List<string>();
-            list.Add("a");
-            list.Add("b");
+            var list = NoteAccessor.FindAll();
 
             var listView = new ListView();
             listView.ItemsSource = list;
