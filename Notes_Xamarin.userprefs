@@ -1,0 +1,31 @@
+﻿<Properties StartupItem="ResourceAccessTests/ResourceAccessTests_iOS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Notes_Xamarin/Pages/NoteList.cs">
+    <Files>
+      <File FileName="Notes_Xamarin/Notes_Xamarin.cs" Line="4" Column="4" />
+      <File FileName="Notes_Xamarin/Pages/RootPage.cs" Line="1" Column="1" />
+      <File FileName="Notes_Xamarin/Pages/MasterPage.cs" Line="1" Column="1" />
+      <File FileName="Notes_Xamarin/Pages/NoteList.cs" Line="13" Column="13" />
+      <File FileName="Notes_Xamarin/Pages/NoteEditPage.cs" Line="15" Column="15" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Notes_Xamarin" expanded="True">
+            <Node name="Pages" expanded="True">
+              <Node name="NoteList.cs" selected="True" />
+            </Node>
+            <Node name="Properties" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
