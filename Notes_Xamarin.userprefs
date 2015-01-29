@@ -1,26 +1,38 @@
-﻿<Properties StartupItem="iOS/Notes_Xamarin.iOS.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Notes_Xamarin/Pages/NoteList.cs">
+﻿<Properties StartupItem="Droid/Notes_Xamarin.Droid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.MonoForAndroid_API_12" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/CustomControls/MyEditorRender.cs">
     <Files>
-      <File FileName="Notes_Xamarin/Notes_Xamarin.cs" Line="4" Column="4" />
+      <File FileName="ResourceAccess/NoteAccessor.cs" Line="1" Column="1" />
+      <File FileName="ResourceAccess/Note.cs" Line="1" Column="1" />
+      <File FileName="ResourceAccessTests/NoteAccessorTests.cs" Line="1" Column="1" />
+      <File FileName="Notes_Xamarin/Pages/NoteEditPage.cs" Line="1" Column="1" />
+      <File FileName="Notes_Xamarin/CustomControls/MyEditor.cs" Line="1" Column="1" />
+      <File FileName="iOS/CustomControls/MyEditorRender.cs" Line="34" Column="34" />
+      <File FileName="Notes_Xamarin/Pages/NoteList.cs" Line="1" Column="1" />
+      <File FileName="Notes_Xamarin/Pages/BaseContentPage.cs" Line="1" Column="1" />
+      <File FileName="iOS/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="ResourceAccess/AccessorBase.cs" Line="1" Column="1" />
       <File FileName="Notes_Xamarin/Pages/RootPage.cs" Line="1" Column="1" />
-      <File FileName="Notes_Xamarin/Pages/MasterPage.cs" Line="1" Column="1" />
-      <File FileName="Notes_Xamarin/Pages/NoteList.cs" Line="13" Column="13" />
-      <File FileName="Notes_Xamarin/Pages/NoteEditPage.cs" Line="15" Column="15" />
+      <File FileName="Notes_Xamarin/Notes_Xamarin.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="Notes_Xamarin" expanded="True">
-            <Node name="Pages" expanded="True">
-              <Node name="NoteList.cs" selected="True" />
+          <Node name="Clients" expanded="True">
+            <Node name="Notes_Xamarin" expanded="True">
+              <Node name="CustomControls" expanded="True" />
+              <Node name="Pages" expanded="True" />
             </Node>
-            <Node name="Properties" expanded="True" />
+            <Node name="Notes_Xamarin.Droid" selected="True" />
+            <Node name="Notes_Xamarin.iOS" expanded="True">
+              <Node name="CustomControls" expanded="True" />
+            </Node>
           </Node>
+          <Node name="Services" expanded="True">
+            <Node name="ResourceAccess" expanded="True" />
+          </Node>
+          <Node name="Tests" expanded="True" />
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

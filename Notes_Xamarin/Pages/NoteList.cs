@@ -40,6 +40,7 @@ namespace Notes_Xamarin
 
             var list = NoteAccessor.FindAll();
             listView.ItemsSource = list;           
+
         }
     }
 }
