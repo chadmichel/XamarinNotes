@@ -1,8 +1,8 @@
 /Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/obj/Debug/MonoAndroid,Version=v4.4.AssemblyAttribute.cs
 /Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/bin/Debug/ResourceAccessTests.Droid.dll.mdb
 /Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/bin/Debug/ResourceAccessTests.Droid.dll
-/Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/bin/Debug/ResourceAccessTests.Droid.apk
-/Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/obj/Debug/android/bin/ResourceAccessTests.Droid.apk
+/Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/bin/Debug/ResourceAccessTests_Droid.ResourceAccessTests_Droid.apk
+/Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/obj/Debug/android/bin/ResourceAccessTests_Droid.ResourceAccessTests_Droid.apk
 /Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/obj/Debug/res/layout/main.xml
 /Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/obj/Debug/res/values/strings.xml
 /Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/obj/Debug/res/drawable-hdpi/icon.png
@@ -11,7 +11,7 @@
 /Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/obj/Debug/res/drawable-xxhdpi/icon.png
 /Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/obj/Debug/res/drawable-xxxhdpi/icon.png
 /Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/obj/Debug/R.cs.flag
-/Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/bin/Debug/ResourceAccessTests.Droid-Signed.apk
+/Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/bin/Debug/ResourceAccessTests_Droid.ResourceAccessTests_Droid-Signed.apk
 /Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/obj/Debug/uploadflags.txt
 /Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/obj/Debug/ResourceAccessTests.Droid.dll
 /Users/chad/Projects/XamarinNotes/ResourceAccessTests/ResourceAccessTests.Droid/obj/Debug/ResourceAccessTests.Droid.dll.mdb

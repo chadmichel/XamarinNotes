@@ -2,12 +2,14 @@
 using Xamarin.Forms;
 using System.Collections.Generic;
 using ResourceAccess;
+using System.Collections.ObjectModel;
 
 namespace Notes_Xamarin
 {
     public class NoteList : BaseContentPage
     {
         ListView listView;
+        ObservableCollection<Note> collection = new ObservableCollection<Note>();
 
         public NoteList()
         {
@@ -15,7 +17,8 @@ namespace Notes_Xamarin
                 new ToolbarItem("Add", null, 
                     new Action(() => 
                         {
-                            this.Navigation.PushAsync(new NoteEditPage(new Note()), true);
+                            var model = NewModel(new Note());
+                            Navigation.PushAsync(new NoteEditPage(model), true);
                         }
                     ), ToolbarItemOrder.Primary, 0));
                         
@@ -28,20 +31,58 @@ namespace Notes_Xamarin
                     var note = e.SelectedItem as Note;
                     if (note != null)
                     {
-                        this.Navigation.PushAsync(new NoteEditPage(note), true);
+                        var model = NewModel(note);
+                        Navigation.PushAsync(new NoteEditPage(model), true);
                     }
                 };
+            listView.ItemsSource = collection;
 
+            // add all notes
+            var list = NoteAccessor.FindAll();           
+            foreach(var item in list)
+                collection.Add(item);
+        }
+
+        protected void ReloadList()
+        {
+            listView.ItemsSource = null;
+            collection.Clear();
+            var list = NoteAccessor.FindAll();           
+            foreach(var item in list)
+                collection.Add(item);
+            listView.ItemsSource = collection;
+        }
+
+        protected NoteEditModel NewModel(Note note)
+        {
+            var model = new NoteEditModel()
+            {
+                Note = note,
+                IsNew = (note.Id <= 0),
+            };
+
+            model.Save = () =>
+            {
+                NoteAccessor.Save(model.Note);
+                ReloadList();
+            };
+
+            model.Cancel = () =>
+            {
+                listView.ItemsSource = null;
+                ReloadList();
+            };
+
+            return model;
         }
 
         protected override void OnAppearing()
         {
-            base.OnAppearing();
+            base.OnAppearing(); 
 
-            var list = NoteAccessor.FindAll();
-            listView.ItemsSource = list;           
 
         }
+
     }
 }
 

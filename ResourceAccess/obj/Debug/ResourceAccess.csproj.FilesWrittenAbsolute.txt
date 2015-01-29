@@ -1,10 +1,3 @@
-/Users/chad/Projects/Notes_Xamarin/ResourceAccess/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
-/Users/chad/Projects/Notes_Xamarin/ResourceAccess/bin/Debug/ResourceAccess.dll.mdb
-/Users/chad/Projects/Notes_Xamarin/ResourceAccess/bin/Debug/ResourceAccess.dll
-/Users/chad/Projects/Notes_Xamarin/ResourceAccess/obj/Debug/ResourceAccess.dll
-/Users/chad/Projects/Notes_Xamarin/ResourceAccess/obj/Debug/ResourceAccess.dll.mdb
-/Users/chad/Projects/Notes_Xamarin/ResourceAccess/bin/Debug/SQLitePCL.raw.dll
-/Users/chad/Projects/Notes_Xamarin/ResourceAccess/bin/Debug/SQLite-net.dll
 /Users/chad/Projects/XamarinNotes/ResourceAccess/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
 /Users/chad/Projects/XamarinNotes/ResourceAccess/bin/Debug/ResourceAccess.dll.mdb
 /Users/chad/Projects/XamarinNotes/ResourceAccess/bin/Debug/ResourceAccess.dll

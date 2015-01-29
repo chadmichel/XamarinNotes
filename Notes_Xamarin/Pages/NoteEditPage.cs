@@ -6,17 +6,19 @@ namespace Notes_Xamarin
 {
     public class NoteEditPage : BaseContentPage
     {
-        Note _note = null;
+        NoteEditModel _model;
+        Note _note;
         bool _isNew = false;
         Entry entry;
         MyEditor editor;
         Button deleteCancel;
         bool _isCanceling = false;
 
-        public NoteEditPage(Note note)
+        public NoteEditPage(NoteEditModel model)
         {
-            _note = note;
-            _isNew = note.Id <= 0;
+            _model = model;
+            _note = model.Note;
+            _isNew = model.IsNew;
             Title = "Note";           
 
             entry = new Entry()
@@ -29,6 +31,7 @@ namespace Notes_Xamarin
             {
                 Keyboard = Keyboard.Create(KeyboardFlags.All),
                 VerticalOptions = LayoutOptions.FillAndExpand,                     
+                Text = _note.Body
             };                 
 
             deleteCancel = new Button()
@@ -43,7 +46,7 @@ namespace Notes_Xamarin
                 if (!_isNew)
                 {
                     _note.IsDeleted = true;
-                    NoteAccessor.Save(_note);
+                    _model.Save();
                 }
 
                 Navigation.PopAsync();                    
@@ -63,6 +66,11 @@ namespace Notes_Xamarin
             };
         }
 
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+        }
+
         protected override void OnDisappearing()
         {
             base.OnDisappearing();           
@@ -72,12 +80,26 @@ namespace Notes_Xamarin
                 _note.Title = entry.Text;
                 _note.Body = editor.Text;
 
+                bool save = false;
                 if (!string.IsNullOrWhiteSpace(_note.Title) || !string.IsNullOrWhiteSpace(_note.Body) || _note.Id > 0)
                 {
-                    NoteAccessor.Save(_note);
+                    save = true;
                 }
+
+                if (save)
+                    _model.Save();
+                else
+                    _model.Cancel();
             }
         }
+    }
+
+    public class NoteEditModel
+    {
+        public Note Note { get; set; }
+        public bool IsNew { get; set; }
+        public Action Save { get; set; }
+        public Action Cancel { get; set; }
     }
 }
 
